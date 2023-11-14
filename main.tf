@@ -73,7 +73,7 @@ resource "aws_lambda_function" "terraform_lambda_func" {
  depends_on                     = [aws_iam_role_policy_attachment.attach_iam_policy_to_iam_role]
 }
 
-resource "aws_lambda_invocation" "example" {
+resource "aws_lambda_invocation" "invoc_t3" {
   function_name = aws_lambda_function.terraform_lambda_func.function_name
 
   input = jsonencode({
@@ -83,7 +83,7 @@ resource "aws_lambda_invocation" "example" {
 }
 
 output "result_entry" {
-  value = jsondecode(aws_lambda_invocation.example.result)
+  value = jsondecode(aws_lambda_invocation.invoke_t3.result)
 }
 
 
