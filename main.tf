@@ -1,3 +1,15 @@
+terraform {
+      backend "remote" {
+         # The name of your Terraform Cloud organization.
+         organization = "aws_lambda"
+
+         # The name of the Terraform Cloud workspace to store Terraform state files in.
+         workspaces {
+           name = "terraform_tutorial"
+         }
+       }
+   }
+
 provider "aws" {
   region = "us-east-1"
 
