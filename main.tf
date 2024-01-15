@@ -1,4 +1,10 @@
 terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 3.74"
+    }
+  }
       backend "remote" {
          # The name of your Terraform Cloud organization.
          organization = "aws_lambda"
@@ -7,8 +13,8 @@ terraform {
          workspaces {
            name = "terraform_tutorial"
          }
-       }
-   }
+     }
+}
 
 provider "aws" {
   region = "us-east-1"
