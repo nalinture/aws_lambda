@@ -85,7 +85,7 @@ resource "aws_lambda_function" "terraform_lambda_func" {
  depends_on                     = [aws_iam_role_policy_attachment.attach_iam_policy_to_iam_role]
 }
 
-resource "aws_lambda_invocation" "invoc_t3" {
+resource "aws_lambda_invocation" "invoke_t3" {
   function_name = aws_lambda_function.terraform_lambda_func.function_name
 
   input = jsonencode({
