@@ -1,10 +1,4 @@
 terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 3.74"
-    }
-  }
       backend "remote" {
          # The name of your Terraform Cloud organization.
          organization = "aws_lambda"
@@ -14,6 +8,14 @@ terraform {
            name = "terraform_tutorial"
          }
      }
+}
+
+variable "AWS_ACCESS_KEY_ID" {
+   default = ""
+}
+
+variable "AWS_SECRET_ACCESS_KEY" {
+   default = ""
 }
 
 provider "aws" {
