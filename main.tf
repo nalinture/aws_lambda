@@ -20,8 +20,8 @@ terraform {
 
 provider "aws" {
   region = "us-east-1"
-  access_key = "AKIAYJ5URY7DEC4Y7T22"
-  secret_key = "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"
+  #access_key = "AKIAYJ5URY7DEC4Y7T22"
+  #secret_key = "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"
 }
 
 resource "aws_iam_role" "lambda_role" {
