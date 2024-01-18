@@ -8,6 +8,7 @@ terraform {
            name = "terraform_tutorial"
          }
      }
+}
 
  required_providers {
     aws = {
