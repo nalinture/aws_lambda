@@ -30,8 +30,7 @@ resource "aws_iam_role" "lambda_role" {
   "Statement": [
     {
       "Action": [
-          "sts:AssumeRole",
-          "iam:CreateRole"
+          "sts:AssumeRole"
       ],
       "Principal": {
         "Service": "lambda.amazonaws.com"
