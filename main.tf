@@ -35,7 +35,7 @@ resource "aws_iam_role" "lambda_role" {
       "Principal": {
         "Service": "lambda.amazonaws.com"
       },
-      "Resource": "arn:aws:iam::571072432070:user/tf_user",
+      "Resource": "*",
       "Effect": "Allow",
       "Sid": ""
     }
