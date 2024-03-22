@@ -97,7 +97,7 @@ resource "aws_lambda_invocation" "invoke_t3" {
 
   input = jsonencode({
     key1 = "DevOps"
-    key2 = "accenture"
+    key2 = "india"
   })
 }
 
