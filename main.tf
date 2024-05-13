@@ -6,7 +6,6 @@ terraform {
       name = "lambda_run"
     }
   }
-}
 
 
  required_providers {
